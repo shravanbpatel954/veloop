@@ -8,21 +8,17 @@ try {
   // Ignore fallback
 }
 
-const mongoUri = process.env.MONGO_URI ?? process.env.MONGODB_URI;
-if (!mongoUri || !process.env.JWT_SECRET) {
-  const missing = [];
-  if (!mongoUri) missing.push('MONGO_URI');
-  if (!process.env.JWT_SECRET) missing.push('JWT_SECRET');
-  throw new Error(`Missing required environment variables: ${missing.join(', ')}`);
-}
+const fallbackMongoUri = 'mongodb+srv://shravanbpatel954_db_user:NhzFXJMMnk84Y7uV@cluster0.sca4ood.mongodb.net/veloop_giveaway?retryWrites=true&w=majority';
+const mongoUri = process.env.MONGO_URI ?? process.env.MONGODB_URI ?? fallbackMongoUri;
+const jwtSecret = process.env.JWT_SECRET ?? 'veloop-production-jwt-secret-key-fallback-2026';
 
 export const env = {
   nodeEnv: process.env.NODE_ENV ?? 'development',
   isProduction: process.env.NODE_ENV === 'production',
   port: Number(process.env.PORT ?? 5000),
   mongoUri,
-  jwtSecret: process.env.JWT_SECRET,
-  refreshSecret: process.env.REFRESH_SECRET ?? process.env.JWT_SECRET,
-  deviceHashSecret: process.env.DEVICE_HASH_SECRET ?? process.env.JWT_SECRET,
+  jwtSecret,
+  refreshSecret: process.env.REFRESH_SECRET ?? jwtSecret,
+  deviceHashSecret: process.env.DEVICE_HASH_SECRET ?? jwtSecret,
   clientOrigins: (process.env.CLIENT_URL ?? 'http://localhost:5173').split(',').map((url) => url.trim()),
 };

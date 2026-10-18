@@ -24,8 +24,12 @@ export function createApp() {
   app.use(
     cors({
       origin(origin, callback) {
-        // Allow same-origin / server-to-server calls (no Origin header) and the configured clients only.
+        // Allow same-origin / server-to-server calls (no Origin header) and configured clients
         if (!origin || env.clientOrigins.includes(origin)) return callback(null, true);
+        // Also allow all *.vercel.app domains and local dev
+        if (/^https:\/\/.*\.vercel\.app$/.test(origin) || origin.startsWith('http://localhost:')) {
+          return callback(null, true);
+        }
         return callback(null, false);
       },
       allowedHeaders: ['Content-Type', 'Authorization', 'Idempotency-Key', 'X-Device-Id', 'X-Request-Id'],
