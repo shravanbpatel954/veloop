@@ -1,0 +1,18 @@
+.loader { display: grid; justify-items: center; align-content: center; gap: 18px; padding: 60px 20px; }
+.full { min-height: 100vh; }
+.stage { position: relative; width: 190px; height: 190px; display: grid; place-items: center; }
+.gift { width: 118px; animation: float 3.2s ease-in-out infinite; filter: drop-shadow(0 12px 22px rgba(139, 92, 246, 0.45)); }
+.ring { position: absolute; inset: 14px; border-radius: 50%; border: 1px solid rgba(167, 139, 250, 0.45); animation: ripple 3s ease-out infinite; }
+.ringOuter { animation-delay: 1.5s; }
+.spark { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); opacity: 0; animation: twinkle 2.8s ease-in-out infinite; }
+.s1 { top: 18%; left: 16%; } .s2 { top: 30%; right: 12%; animation-delay: 0.9s; } .s3 { bottom: 20%; left: 26%; animation-delay: 1.8s; }
+.message { color: var(--text-muted); font-size: 0.95rem; animation: fadeIn 0.6s ease; }
+.dots { display: flex; gap: 7px; }
+.dots span { width: 7px; height: 7px; border-radius: 50%; background: var(--purple); animation: dot 1.4s ease-in-out infinite; }
+.dots span:nth-child(2) { animation-delay: 0.15s; } .dots span:nth-child(3) { animation-delay: 0.3s; } .dots span:nth-child(4) { animation-delay: 0.45s; } .dots span:nth-child(5) { animation-delay: 0.6s; }
+
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes ripple { 0% { transform: scale(0.6); opacity: 0.8; } 100% { transform: scale(1.25); opacity: 0; } }
+@keyframes twinkle { 0%, 100% { opacity: 0; transform: scale(0.5); } 50% { opacity: 0.9; transform: scale(1); } }
+@keyframes dot { 0%, 100% { opacity: 0.25; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-4px); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }

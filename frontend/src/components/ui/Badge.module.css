@@ -1,0 +1,15 @@
+.badge {
+  --c: #c4b5fd; --bg: rgba(139, 92, 246, 0.14);
+  display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--c); background: var(--bg); border: 1px solid color-mix(in srgb, var(--c) 30%, transparent);
+}
+.badge[data-tone='gold'] { --c: #f5b942; --bg: rgba(245, 185, 66, 0.12); }
+.badge[data-tone='green'] { --c: #34d399; --bg: rgba(52, 211, 153, 0.12); }
+.badge[data-tone='blue'] { --c: #60a5fa; --bg: rgba(59, 130, 246, 0.14); }
+.badge[data-tone='orange'] { --c: #fb923c; --bg: rgba(249, 115, 22, 0.14); }
+.badge[data-tone='neutral'] { --c: #a09db8; --bg: rgba(255, 255, 255, 0.06); }
+.badge[data-tone='danger'] { --c: #f87171; --bg: rgba(248, 113, 113, 0.12); }
+
+.dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.75); } }

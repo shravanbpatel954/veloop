@@ -1,0 +1,2 @@
+.section { padding: 24px 18px; border: 1px solid var(--border); border-radius: var(--radius-xl); background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015)); }
+@media (min-width: 640px) { .section { padding: 28px 26px; } }

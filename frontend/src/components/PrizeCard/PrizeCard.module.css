@@ -1,0 +1,35 @@
+.card {
+  --accent: #8b5cf6;
+  position: relative; display: flex; flex-direction: column; overflow: hidden; height: 100%;
+  border-radius: var(--radius-lg); border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
+  background: radial-gradient(120% 60% at 50% 0%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 70%), var(--surface);
+  transition: transform 0.3s var(--ease), border-color 0.3s, box-shadow 0.3s;
+}
+.card:hover, .card:focus-within { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 18px 36px -18px var(--accent); }
+
+.tag {
+  position: absolute; top: 12px; left: 12px; z-index: 2; padding: 4px 10px; border-radius: 8px;
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em; color: #fff;
+  background: color-mix(in srgb, var(--accent) 80%, #000);
+}
+
+.imageWrap { display: grid; place-items: center; height: 170px; padding: 28px 22px 8px; }
+.image { height: 130px; width: auto; max-width: 100%; object-fit: contain; transition: transform 0.45s var(--ease); filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.45)); }
+.card:hover .image, .card:focus-within .image { transform: translateY(-4px) scale(1.06); }
+
+.body { display: grid; gap: 6px; padding: 8px 18px 16px; flex: 1; align-content: start; }
+.name { font-size: 1.08rem; font-weight: 700; }
+/* stretched link: the whole card is clickable, the visible CTA stays a real button */
+.stretched::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+.description { color: var(--text-muted); font-size: 0.85rem; }
+.fee { margin-top: 4px; font-size: 0.82rem; color: var(--text-muted); }
+.fee strong { color: var(--text); font-weight: 700; }
+
+.meta { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; margin: 8px 0 0; padding-top: 12px; border-top: 1px solid var(--border); }
+.meta dt { display: flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 500; color: var(--text-dim); }
+.meta dd { margin: 2px 0 0; font-size: 0.92rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.meta dt svg { color: var(--accent); }
+.timeRow { grid-column: 1 / -1; }
+
+.cta { padding: 0 18px 18px; }
+.ctaButton { position: relative; z-index: 2; }

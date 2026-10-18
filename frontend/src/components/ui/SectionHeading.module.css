@@ -1,0 +1,7 @@
+.heading { display: grid; gap: 6px; margin-bottom: 22px; }
+.center { text-align: center; justify-items: center; }
+.eyebrow { color: var(--purple-soft); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+.title { display: flex; align-items: center; gap: 10px; font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 700; letter-spacing: -0.01em; }
+.center .title { justify-content: center; }
+.icon { color: var(--gold); }
+.subtitle { color: var(--text-muted); font-size: 0.95rem; max-width: 560px; line-height: 1.6; }

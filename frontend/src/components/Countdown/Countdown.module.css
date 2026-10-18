@@ -1,0 +1,17 @@
+.inline { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.sep { opacity: 0.5; }
+
+.blocks { display: flex; align-items: flex-start; gap: 4px; }
+.group { display: flex; align-items: flex-start; gap: 4px; }
+.cell {
+  min-width: 62px; padding: 10px 6px 8px; text-align: center; border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border);
+}
+.value { display: block; font-size: 1.6rem; font-weight: 700; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.unit { display: block; margin-top: 4px; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); }
+.colon { padding-top: 12px; color: var(--text-dim); font-weight: 700; }
+.done .value { color: var(--text-dim); }
+@media (max-width: 400px) {
+  .cell { min-width: 52px; }
+  .value { font-size: 1.3rem; }
+}

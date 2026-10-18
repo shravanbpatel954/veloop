@@ -1,0 +1,193 @@
+.nav {
+  position: sticky; top: 0; z-index: 50; height: var(--nav-height);
+  background: rgba(7, 6, 15, 0.85); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.links { display: none; gap: 6px; }
+.links a { padding: 8px 16px; border-radius: 10px; color: var(--text-muted); font-size: 0.92rem; font-weight: 600; transition: color 0.2s, background 0.2s; }
+.links a:hover { color: var(--text); background: rgba(255, 255, 255, 0.05); }
+.links a.active { color: #fff; background: rgba(139, 92, 246, 0.22); border: 1px solid rgba(139, 92, 246, 0.35); }
+
+.back { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px 8px 10px; border-radius: 10px; font-weight: 600; font-size: 0.92rem; color: var(--text); transition: background 0.2s; border: 1px solid var(--border); }
+.back:hover { background: rgba(255, 255, 255, 0.06); border-color: var(--border-strong); }
+.backShort { display: inline; }
+.backFull { display: none; }
+.centerLogo { display: none; }
+
+.account { display: flex; align-items: center; gap: 10px; position: relative; }
+
+/* Balance Pills */
+.balancePills {
+  display: none;
+  align-items: center;
+  gap: 8px;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.pill strong {
+  color: var(--purple-soft);
+}
+
+.userBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px 4px 4px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.userBtn:hover {
+  border-color: var(--border-strong);
+  background: rgba(255, 255, 255, 0.08);
+}
+.avatar {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #fff;
+}
+.userId {
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 280px;
+  background: rgba(18, 16, 31, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 100;
+  animation: dropIn 0.2s var(--ease);
+}
+
+.dropHeader {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+.dropName {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dropRole {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(139, 92, 246, 0.2);
+  color: var(--purple-soft);
+}
+.dropEmail {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.dropBalances {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.82rem;
+}
+.dropBalanceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-muted);
+}
+.dropBalanceRow span:last-child {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.dropPersonaSection {
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
+.dropPersonaLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.personaPillGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.personaPill {
+  font-size: 0.74rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.personaPill:hover, .personaPillActive {
+  background: var(--purple);
+  color: #fff;
+  border-color: var(--purple);
+}
+
+.logoutBtn {
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--danger);
+  background: transparent;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}
+
+@keyframes dropIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (min-width: 576px) { .backShort { display: none; } .backFull { display: inline; } }
+@media (min-width: 768px) { .links { display: flex; } .centerLogo { display: block; } }
+@media (min-width: 900px) { .balancePills { display: flex; } }
+@media (max-width: 420px) { .userId { display: none; } .userBtn { padding-right: 4px; } }

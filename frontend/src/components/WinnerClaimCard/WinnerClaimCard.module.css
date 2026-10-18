@@ -1,0 +1,28 @@
+.card {
+  display: grid; gap: 18px; align-items: center; padding: 22px 20px; border-radius: var(--radius-xl);
+  border: 1px solid rgba(245, 185, 66, 0.5);
+  background: radial-gradient(90% 120% at 0% 0%, rgba(245, 185, 66, 0.12), transparent 60%), var(--surface);
+  box-shadow: 0 0 40px rgba(245, 185, 66, 0.08);
+}
+.image { width: 120px; justify-self: center; filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.5)); }
+.main { display: grid; gap: 10px; }
+.kicker { display: inline-flex; align-items: center; gap: 8px; color: var(--gold); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.title { font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 800; letter-spacing: -0.01em; }
+
+.details { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 18px; margin: 8px 0 0; padding-top: 14px; border-top: 1px solid var(--border); }
+.details dt { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-dim); }
+.details dd { margin: 2px 0 0; font-size: 0.92rem; font-weight: 600; }
+.wide { grid-column: 1 / -1; }
+.verified { display: inline-flex; align-items: center; gap: 6px; color: var(--green); }
+
+.action { display: grid; }
+.status { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; border-radius: var(--radius-md); border: 1px solid var(--border); background: rgba(255, 255, 255, 0.04); }
+.status strong { display: block; font-size: 0.98rem; }
+.status span { color: var(--text-muted); font-size: 0.84rem; line-height: 1.5; }
+.status[data-tone='good'] { color: var(--green); border-color: rgba(52, 211, 153, 0.35); background: rgba(52, 211, 153, 0.08); }
+.status[data-tone='info'] { color: #60a5fa; border-color: rgba(96, 165, 250, 0.35); background: rgba(59, 130, 246, 0.08); }
+.status[data-tone='bad'] { color: var(--danger); border-color: rgba(248, 113, 113, 0.35); background: rgba(248, 113, 113, 0.08); }
+.status strong { color: var(--text); }
+
+@media (min-width: 768px) { .card { grid-template-columns: 150px 1fr; padding: 28px; } .action { grid-column: 1 / -1; } }
+@media (min-width: 1100px) { .card { grid-template-columns: 160px 1fr 280px; } .action { grid-column: auto; } .details { grid-template-columns: repeat(4, auto); } .wide { grid-column: 1 / -1; } }

@@ -1,0 +1,8 @@
+.trust { display: grid; gap: 1px; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--border); }
+.item { display: flex; gap: 14px; align-items: flex-start; padding: 20px; background: var(--surface); }
+.icon { flex-shrink: 0; width: 46px; height: 46px; display: grid; place-items: center; border-radius: 50%; color: var(--c); background: color-mix(in srgb, var(--c) 15%, transparent); }
+.icon[data-tone='purple'] { --c: #a78bfa; } .icon[data-tone='blue'] { --c: #60a5fa; } .icon[data-tone='green'] { --c: #34d399; } .icon[data-tone='orange'] { --c: #fb923c; }
+.item h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 3px; }
+.item p { color: var(--text-muted); font-size: 0.83rem; line-height: 1.55; }
+@media (min-width: 640px) { .trust { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1100px) { .trust { grid-template-columns: repeat(4, 1fr); } }

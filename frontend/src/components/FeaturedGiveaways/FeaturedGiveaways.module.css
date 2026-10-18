@@ -1,0 +1,12 @@
+.panel { height: 100%; padding: 24px 18px; border: 1px solid var(--border); border-radius: var(--radius-xl); background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015)); }
+
+/* Mobile: a swipeable row. Tablet and up: a normal grid. */
+.grid { list-style: none; margin: 0; padding: 4px 2px 12px; display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+.grid > li { flex: 0 0 min(78%, 270px); scroll-snap-align: start; }
+.skeleton { display: grid; gap: 12px; padding: 16px; flex: 0 0 min(78%, 270px); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+
+@media (min-width: 576px) {
+  .panel { padding: 28px 24px; }
+  .grid { display: grid; overflow: visible; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); padding: 4px 0 0; }
+  .grid > li, .skeleton { flex: none; }
+}

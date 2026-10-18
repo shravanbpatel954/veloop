@@ -1,0 +1,3 @@
+.stack { display: grid; gap: 24px; padding-top: 24px; }
+.info { display: grid; gap: 22px; align-content: start; height: 100%; }
+@media (min-width: 992px) { .stack { padding-top: 36px; } }

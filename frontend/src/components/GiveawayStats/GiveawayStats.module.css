@@ -1,0 +1,13 @@
+.stats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px; overflow: hidden;
+  border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--border);
+}
+.item { display: flex; align-items: center; gap: 12px; padding: 16px 14px; background: var(--surface); }
+.icon { flex-shrink: 0; width: 46px; height: 46px; display: grid; place-items: center; border-radius: 14px; color: var(--c); background: color-mix(in srgb, var(--c) 16%, transparent); }
+.icon[data-tone='purple'] { --c: #a78bfa; } .icon[data-tone='blue'] { --c: #60a5fa; } .icon[data-tone='green'] { --c: #34d399; } .icon[data-tone='orange'] { --c: #fb923c; }
+.label { color: var(--text-muted); font-size: 0.78rem; }
+.value { font-size: 1.15rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.value small { font-size: 0.78rem; font-weight: 600; margin-left: 2px; color: var(--c); }
+.value small[data-tone='purple'] { --c: #a78bfa; } .value small[data-tone='blue'] { --c: #60a5fa; } .value small[data-tone='green'] { --c: #34d399; } .value small[data-tone='orange'] { --c: #fb923c; }
+.skeletonText { display: grid; gap: 8px; }
+@media (min-width: 992px) { .stats { grid-template-columns: repeat(4, 1fr); } .item { padding: 22px 24px; gap: 16px; } .value { font-size: 1.4rem; } }

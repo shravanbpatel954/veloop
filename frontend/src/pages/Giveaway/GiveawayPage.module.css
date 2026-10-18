@@ -1,0 +1,9 @@
+.stack { display: grid; gap: 24px; }
+.notice { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; padding: 22px; border-radius: var(--radius-lg); border: 1px solid var(--border-strong); background: rgba(139, 92, 246, 0.08); }
+.notice svg { color: var(--gold); }
+.notice h2 { font-size: 1.15rem; }
+.notice p { color: var(--text-muted); font-size: 0.92rem; }
+.finalCta { display: grid; justify-items: center; gap: 12px; padding: 44px 22px; text-align: center; border-radius: var(--radius-xl); border: 1px solid var(--border-strong); background: radial-gradient(70% 120% at 50% 0%, rgba(139, 92, 246, 0.25), transparent), var(--surface); }
+.finalCta h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 800; }
+.finalCta p { color: var(--text-muted); max-width: 440px; }
+@media (min-width: 768px) { .notice { flex-direction: row; align-items: center; } .notice > div { flex: 1; } }

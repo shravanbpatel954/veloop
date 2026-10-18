@@ -1,0 +1,43 @@
+/* Design tokens: every colour, radius and shadow used in the app lives here. */
+:root {
+  --bg: #07060f;
+  --bg-soft: #0c0a18;
+  --surface: #12101f;
+  --surface-2: #1a1730;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(167, 139, 250, 0.38);
+
+  --text: #f4f3fa;
+  --text-muted: #a09db8;
+  --text-dim: #6f6c88;
+
+  --purple: #8b5cf6;
+  --purple-soft: #c4b5fd;
+  --indigo: #6366f1;
+  --gold: #f5b942;
+  --blue: #3b82f6;
+  --green: #34d399;
+  --orange: #f97316;
+  --danger: #f87171;
+
+  --gradient-primary: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+  --gradient-text: linear-gradient(90deg, #c4b5fd 0%, #a855f7 60%, #8b5cf6 100%);
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 40px rgba(139, 92, 246, 0.22);
+
+  --container: 1200px;
+  --nav-height: 68px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Accent colour per prize card (set through data-accent). */
+[data-accent='purple'] { --accent: #8b5cf6; --accent-soft: rgba(139, 92, 246, 0.16); }
+[data-accent='blue'] { --accent: #3b82f6; --accent-soft: rgba(59, 130, 246, 0.16); }
+[data-accent='green'] { --accent: #34d399; --accent-soft: rgba(52, 211, 153, 0.14); }
+[data-accent='orange'] { --accent: #f97316; --accent-soft: rgba(249, 115, 22, 0.16); }

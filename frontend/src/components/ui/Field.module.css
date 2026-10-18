@@ -1,0 +1,14 @@
+.field { display: grid; gap: 6px; }
+.label { font-size: 0.82rem; font-weight: 600; color: var(--text-muted); }
+.control {
+  width: 100%; padding: 12px 14px; border-radius: var(--radius-sm); font-size: 0.95rem; font-family: inherit;
+  color: var(--text); background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border);
+  transition: border-color 0.2s, background 0.2s;
+}
+.control::placeholder { color: var(--text-dim); }
+.control:hover { border-color: rgba(255, 255, 255, 0.18); }
+.control:focus { outline: none; border-color: var(--purple); background: rgba(139, 92, 246, 0.08); box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2); }
+textarea.control { min-height: 84px; resize: vertical; }
+.invalid { border-color: var(--danger); }
+.hint { font-size: 0.76rem; color: var(--text-dim); }
+.error { font-size: 0.78rem; color: var(--danger); }

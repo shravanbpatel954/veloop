@@ -1,0 +1,9 @@
+.footer { margin-top: 72px; padding: 36px 0 28px; border-top: 1px solid var(--border); background: rgba(0, 0, 0, 0.25); }
+.inner { display: flex; flex-direction: column; gap: 24px; }
+.brand { display: grid; gap: 12px; }
+.brand p { color: var(--text-muted); font-size: 0.9rem; }
+.links { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.links a { color: var(--text-muted); font-size: 0.9rem; transition: color 0.2s; }
+.links a:hover { color: var(--text); }
+.copy { max-width: var(--container); margin: 24px auto 0; padding-inline: 20px; color: var(--text-dim); font-size: 0.78rem; }
+@media (min-width: 768px) { .inner { flex-direction: row; justify-content: space-between; align-items: flex-end; } }

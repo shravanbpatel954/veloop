@@ -1,0 +1,15 @@
+.main { min-height: calc(100vh - var(--nav-height)); display: grid; place-items: start center; padding: 40px 16px; }
+.card { width: 100%; max-width: 460px; padding: 28px 22px; border-radius: var(--radius-xl); border: 1px solid var(--border-strong); background: linear-gradient(180deg, #16132a, #0f0d1c); box-shadow: var(--shadow-card), var(--shadow-glow); }
+.card h1 { font-size: 1.5rem; font-weight: 700; }
+.sub { margin: 8px 0 18px; color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; }
+.personas { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.personas button { width: 100%; display: flex; align-items: center; gap: 12px; padding: 12px 14px; text-align: left; border-radius: var(--radius-md); border: 1px solid var(--border); background: rgba(255, 255, 255, 0.03); color: var(--text); cursor: pointer; transition: border-color 0.2s, background 0.2s, transform 0.2s; }
+.personas button:hover:not(:disabled) { border-color: var(--purple); background: rgba(139, 92, 246, 0.1); transform: translateY(-1px); }
+.personas button:disabled { opacity: 0.6; cursor: wait; }
+.avatar { flex-shrink: 0; width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; background: var(--gradient-primary); }
+.who { display: grid; gap: 1px; }
+.who strong small { margin-left: 6px; font-weight: 500; color: var(--text-dim); }
+.who span { color: var(--text-muted); font-size: 0.82rem; }
+.form { display: grid; gap: 14px; }
+.form .sub { margin-bottom: 4px; }
+.error { margin-top: 14px; padding: 10px 14px; border-radius: var(--radius-sm); font-size: 0.85rem; color: #fecaca; background: rgba(248, 113, 113, 0.1); border: 1px solid rgba(248, 113, 113, 0.3); }

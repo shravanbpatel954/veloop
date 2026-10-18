@@ -1,0 +1,11 @@
+.wrap {
+  display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px;
+  padding: 48px 24px; border: 1px dashed var(--border-strong); border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.02);
+}
+.compact { padding: 28px 20px; }
+.icon { width: 56px; height: 56px; display: grid; place-items: center; border-radius: 16px; color: var(--purple-soft); background: rgba(139, 92, 246, 0.14); }
+.compact .icon { width: 44px; height: 44px; border-radius: 12px; }
+.title { font-size: 1.1rem; font-weight: 700; }
+.message { max-width: 420px; color: var(--text-muted); font-size: 0.93rem; line-height: 1.6; }
+.action { margin-top: 8px; }

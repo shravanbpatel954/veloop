@@ -1,0 +1,9 @@
+.card { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; padding: 18px; border-radius: var(--radius-lg); border: 1px solid var(--border); background: rgba(255, 255, 255, 0.03); text-align: left; }
+.copy { display: grid; gap: 3px; flex: 1; }
+.copy strong { font-size: 1rem; }
+.copy span { color: var(--text-muted); font-size: 0.88rem; line-height: 1.5; }
+.copy b { color: var(--text); }
+.icon { color: var(--purple-soft); } .ok { color: var(--green); }
+.balances { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.balances li { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; font-size: 0.78rem; font-weight: 600; color: var(--text-muted); background: rgba(255, 255, 255, 0.05); font-variant-numeric: tabular-nums; }
+@media (min-width: 768px) { .card { flex-direction: row; align-items: center; gap: 18px; padding: 16px 20px; } }

@@ -1,0 +1,15 @@
+.wrap { position: fixed; z-index: 900; right: 14px; bottom: 14px; }
+.fab { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--border-strong); background: rgba(18, 16, 31, 0.92); backdrop-filter: blur(10px); color: var(--text); font-size: 0.82rem; font-weight: 600; cursor: pointer; box-shadow: var(--shadow-card); }
+.panel { width: min(320px, calc(100vw - 28px)); max-height: 80vh; overflow-y: auto; display: grid; gap: 8px; padding: 16px; border-radius: var(--radius-lg); border: 1px solid var(--border-strong); background: rgba(18, 16, 31, 0.97); box-shadow: var(--shadow-card), var(--shadow-glow); }
+.head { display: flex; align-items: center; justify-content: space-between; }
+.head strong { display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem; }
+.head button { background: none; border: 0; color: var(--text-muted); cursor: pointer; }
+.label { margin-top: 6px; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-dim); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips button { padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border); background: rgba(255, 255, 255, 0.04); color: var(--text-muted); font-size: 0.78rem; font-weight: 600; cursor: pointer; }
+.chips .on { color: #fff; border-color: var(--purple); background: rgba(139, 92, 246, 0.3); }
+.panel select { width: 100%; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--border); background: #0c0a18; color: var(--text); font-size: 0.82rem; }
+.toggles { display: grid; gap: 6px; margin-top: 4px; font-size: 0.8rem; color: var(--text-muted); }
+.toggles label { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.reset { margin-top: 6px; padding: 8px; border-radius: 10px; border: 1px solid var(--border); background: none; color: var(--text-muted); font-size: 0.8rem; cursor: pointer; }
+.reset:hover { color: var(--text); background: rgba(255, 255, 255, 0.05); }
