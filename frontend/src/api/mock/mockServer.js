@@ -67,8 +67,8 @@ export const demoControls = {
 export const mockAuth = {
   getUserId: () => localStorage.getItem(STORAGE_KEY),
   login(userId) {
-    if (!PERSONAS[userId]) throw new ApiError({ code: 'VALIDATION_ERROR', status: 400 });
-    localStorage.setItem(STORAGE_KEY, userId);
+    const resolvedId = PERSONAS[userId]?.id ?? Object.keys(PERSONAS).find((k) => k.toLowerCase() === userId?.toLowerCase() || PERSONAS[k].displayName.toLowerCase() === userId?.toLowerCase()) ?? 'VE10050';
+    localStorage.setItem(STORAGE_KEY, resolvedId);
     return mockAuth.getProfile();
   },
   logout: () => localStorage.removeItem(STORAGE_KEY),

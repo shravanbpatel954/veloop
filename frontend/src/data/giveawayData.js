@@ -235,6 +235,14 @@ export const PERSONAS = {
     winnings: ['PRIZE-004'],
     entries: 8,
   },
+  VE90001: {
+    id: 'VE90001',
+    displayName: 'Admin',
+    label: 'Draw Manager',
+    balances: { VE: 0, SVE: 0, TOKEN: 0 },
+    participations: [],
+    winnings: [],
+  },
 };
 
 /* --------------------------------------------------------------- winners */

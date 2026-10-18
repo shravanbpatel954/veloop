@@ -36,6 +36,7 @@ export function describeError(error) {
     CLAIM_NOT_ALLOWED: { title: 'Claim not available', message: 'This prize cannot be claimed from your account.' },
     CLAIM_EXPIRED: { title: 'Claim window expired', message: 'The claim period for this prize has ended.' },
     VALIDATION_ERROR: { title: 'Please check your details', message: 'Some of the information provided is not valid.' },
+    INVALID_CREDENTIALS: { title: 'Invalid credentials', message: 'Invalid email or password. Please verify your details.' },
     NETWORK_ERROR: { title: "Can't reach VELOOP", message: 'Check your connection and try again.' },
   };
 

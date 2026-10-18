@@ -66,17 +66,37 @@ export const isMockMode = USE_MOCK;
 
 /* ------------------------------------------------------------------ auth */
 
+const EMAIL_TO_PERSONA_ID = {
+  'aarav@example.com': 'VE10050',
+  'meera@example.com': 'VE10077',
+  'rohan@example.com': 'VE10042',
+  'isha@example.com': 'VE10025',
+  'admin@example.com': 'VE90001',
+  'aarav': 'VE10050',
+  'meera': 'VE10077',
+  'rohan': 'VE10042',
+  'isha': 'VE10025',
+  'admin': 'VE90001',
+};
+
 export const authApi = {
   /** Mock mode logs in as a demo persona; live mode uses email + password with demo fallback. */
   async login(credentials) {
-    if (USE_MOCK) return mockAuth.login(credentials.userId || credentials.email);
+    const emailKey = credentials.email?.toLowerCase().trim();
+    const fallbackId = credentials.userId || EMAIL_TO_PERSONA_ID[emailKey] || EMAIL_TO_PERSONA_ID[emailKey?.split('@')[0]] || 'VE10050';
+
+    if (USE_MOCK) return mockAuth.login(fallbackId);
     try {
-      const data = await request('/auth/login', { method: 'POST', body: credentials });
+      const data = await request('/auth/login', {
+        method: 'POST',
+        body: { email: credentials.email, password: credentials.password },
+      });
       tokenStore.set(data.accessToken);
       return data.user;
     } catch (error) {
       if (error?.code === 'NETWORK_ERROR') {
-        return mockAuth.login(credentials.userId || credentials.email?.split('@')[0] || 'VE10050');
+        console.warn('Live API request failed with NETWORK_ERROR. Falling back to demo session.');
+        return mockAuth.login(fallbackId);
       }
       throw error;
     }

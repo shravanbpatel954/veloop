@@ -69,19 +69,19 @@ export default function LoginPage({ mode = 'login' }) {
                   ⚡ Quick Demo Accounts (1-Click Login)
                 </span>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: 8 }}>
-                  <button type="button" disabled={busy} onClick={() => signIn({ email: 'aarav@example.com', password: 'Password@123' })} style={{ padding: '8px 10px', borderRadius: 8, border: '1px solid var(--border)', background: 'rgba(139, 92, 246, 0.1)', color: 'var(--text)', textAlign: 'left', cursor: 'pointer' }}>
+                  <button type="button" disabled={busy} onClick={() => signIn({ userId: 'VE10050', email: 'aarav@example.com', password: 'Password@123' })} style={{ padding: '8px 10px', borderRadius: 8, border: '1px solid var(--border)', background: 'rgba(139, 92, 246, 0.1)', color: 'var(--text)', textAlign: 'left', cursor: 'pointer' }}>
                     <div style={{ fontWeight: 700, fontSize: '0.85rem' }}>Aarav</div>
                     <div style={{ fontSize: '0.74rem', color: 'var(--text-muted)' }}>850 VEs (Participant)</div>
                   </button>
-                  <button type="button" disabled={busy} onClick={() => signIn({ email: 'meera@example.com', password: 'Password@123' })} style={{ padding: '8px 10px', borderRadius: 8, border: '1px solid var(--border)', background: 'rgba(139, 92, 246, 0.1)', color: 'var(--text)', textAlign: 'left', cursor: 'pointer' }}>
+                  <button type="button" disabled={busy} onClick={() => signIn({ userId: 'VE10077', email: 'meera@example.com', password: 'Password@123' })} style={{ padding: '8px 10px', borderRadius: 8, border: '1px solid var(--border)', background: 'rgba(139, 92, 246, 0.1)', color: 'var(--text)', textAlign: 'left', cursor: 'pointer' }}>
                     <div style={{ fontWeight: 700, fontSize: '0.85rem' }}>Meera</div>
                     <div style={{ fontSize: '0.74rem', color: 'var(--text-muted)' }}>120 VEs (Low Bal)</div>
                   </button>
-                  <button type="button" disabled={busy} onClick={() => signIn({ email: 'isha@example.com', password: 'Password@123' })} style={{ padding: '8px 10px', borderRadius: 8, border: '1px solid var(--border)', background: 'rgba(139, 92, 246, 0.1)', color: 'var(--text)', textAlign: 'left', cursor: 'pointer' }}>
+                  <button type="button" disabled={busy} onClick={() => signIn({ userId: 'VE10025', email: 'isha@example.com', password: 'Password@123' })} style={{ padding: '8px 10px', borderRadius: 8, border: '1px solid var(--border)', background: 'rgba(139, 92, 246, 0.1)', color: 'var(--text)', textAlign: 'left', cursor: 'pointer' }}>
                     <div style={{ fontWeight: 700, fontSize: '0.85rem' }}>Isha</div>
                     <div style={{ fontSize: '0.74rem', color: 'var(--gold)' }}>Winner (Claim Flow)</div>
                   </button>
-                  <button type="button" disabled={busy} onClick={() => signIn({ email: 'admin@example.com', password: 'Password@123' })} style={{ padding: '8px 10px', borderRadius: 8, border: '1px solid var(--border)', background: 'rgba(139, 92, 246, 0.1)', color: 'var(--text)', textAlign: 'left', cursor: 'pointer' }}>
+                  <button type="button" disabled={busy} onClick={() => signIn({ userId: 'VE90001', email: 'admin@example.com', password: 'Password@123' })} style={{ padding: '8px 10px', borderRadius: 8, border: '1px solid var(--border)', background: 'rgba(139, 92, 246, 0.1)', color: 'var(--text)', textAlign: 'left', cursor: 'pointer' }}>
                     <div style={{ fontWeight: 700, fontSize: '0.85rem' }}>Admin</div>
                     <div style={{ fontSize: '0.74rem', color: 'var(--purple-soft)' }}>Draw Manager</div>
                   </button>
